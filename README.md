@@ -3,6 +3,8 @@
 A Discord server-moderation dashboard — cases, violations, audit log, member
 analytics, TempVoice, AutoMod, and more — built with Next.js 16 and React 19.
 
+**Live preview:** [dashboard.quitscope.eu](https://dashboard.quitscope.eu/)
+
 This is a standalone **portfolio demo**: it runs against an in-process mock
 data store instead of a real database or Discord server, and login is a
 one-click demo session instead of real Discord OAuth. No moderation actions
