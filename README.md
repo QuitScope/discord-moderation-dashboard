@@ -1,15 +1,15 @@
-# ModGuard Dashboard (Demo)
+# ModGuard Dashboard
 
-A Discord server-moderation dashboard — cases, violations, audit log, member
-analytics, TempVoice, AutoMod, and more — built with Next.js 16 and React 19.
+Web dashboard for a Discord moderation bot — cases, audit log, member
+analytics, TempVoice, AutoMod, and the rest.
 
-**Live preview:** [dashboard.quitscope.eu](https://dashboard.quitscope.eu/)
+**Preview:** [dashboard.quitscope.eu](https://dashboard.quitscope.eu/)
 
-This is a standalone **portfolio demo**: it runs against an in-process mock
-data store instead of a real database or Discord server, and login is a
-one-click demo session instead of real Discord OAuth. No moderation actions
-here have any real effect anywhere, and no requests ever leave the process
-to Discord's API or any real backend.
+This is just the frontend, running on mock data. The real bot and its
+backend (NestJS + Postgres) are in a private repo — this here is a
+stripped-down version for showing off the UI. Login is a one-click demo
+session, no real Discord OAuth, and nothing here ever talks to Discord's
+API or a real server.
 
 ## Screenshots
 
@@ -44,9 +44,8 @@ to Discord's API or any real backend.
 - Next.js 16 (App Router), React 19, TypeScript
 - next-auth 5 (Auth.js) — demo Credentials login, JWT sessions
 - Tailwind CSS 4
-- An in-process mock store (`src/lib/mock-store.ts` and friends) standing in
-  for the real product's NestJS API + PostgreSQL/Prisma backend and Discord
-  bot connection
+- Mock store (`src/lib/mock-store.ts` and friends) instead of the real
+  NestJS API / Postgres backend and Discord bot connection
 
 ## Running locally
 
@@ -56,11 +55,9 @@ cp .env.example .env.local   # fill in NEXTAUTH_SECRET
 pnpm dev
 ```
 
-Open http://localhost:3000 and click "Demo-Login starten".
+Open http://localhost:3000, click "Demo-Login starten".
 
 ## Notes
 
-- Mock data resets whenever the server process restarts.
-- This repo is a UI/architecture showcase extracted from a larger private
-  project; it is not connected to any real Discord server, database, or the
-  Discord API.
+- Mock data resets on every server restart.
+- No connection to any real Discord server, database, or the Discord API.
