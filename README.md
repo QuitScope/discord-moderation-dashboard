@@ -1,15 +1,15 @@
 # ModGuard Dashboard
 
-Web dashboard for a Discord moderation bot — cases, audit log, member
-analytics, TempVoice, AutoMod, and the rest.
+Web-Dashboard für einen Discord-Moderations-Bot — Cases, Audit-Log,
+Mitglieder-Analytics, TempVoice, AutoMod und der Rest.
 
 **Preview:** [dashboard.quitscope.eu](https://dashboard.quitscope.eu/)
 
-This is just the frontend, running on mock data. The real bot and its
-backend (NestJS + Postgres) are in a private repo — this here is a
-stripped-down version for showing off the UI. Login is a one-click demo
-session, no real Discord OAuth, and nothing here ever talks to Discord's
-API or a real server.
+Das hier ist nur das Frontend, läuft mit Mock-Daten. Der eigentliche Bot
+und sein Backend (NestJS + Postgres) liegen in einem privaten Repo — das
+hier ist eine abgespeckte Version nur zum Zeigen des UIs. Login ist eine
+One-Click-Demo-Session, kein echtes Discord-OAuth, und nichts hier
+spricht jemals mit der Discord-API oder einem echten Server.
 
 ## Screenshots
 
@@ -31,33 +31,35 @@ API or a real server.
 
 ## Features
 
-- **Moderation** — cases (warnings, points, bans, timeouts, rejoin bans, role
-  bans, mass-message deletes, ...), violations, watchlist, audit log, AutoMod
-- **Analytics** — case volume over time, action-type breakdown, leaderboard,
-  moderator stats
-- **Server management** — channels, roles, members, threads
-- **Community** — TempVoice, Wortkette, confessions, reaction roles, embed
-  builder, webhooks, welcome cards, birthdays, ban tags
+- **Moderation** — Cases (Warnungen, Punkte, Bans, Timeouts, Rejoin-Bans,
+  Role-Bans, Massenlöschung von Nachrichten, ...), Violations, Watchlist,
+  Audit-Log, AutoMod
+- **Analytics** — Case-Volumen über Zeit, Aufschlüsselung nach Aktionstyp,
+  Leaderboard, Moderator-Statistiken
+- **Server-Verwaltung** — Channels, Rollen, Mitglieder, Threads
+- **Community** — TempVoice, Wortkette, Confessions, Reaction Roles,
+  Embed-Builder, Webhooks, Welcome Cards, Geburtstage, Ban-Tags
 
 ## Stack
 
 - Next.js 16 (App Router), React 19, TypeScript
-- next-auth 5 (Auth.js) — demo Credentials login, JWT sessions
+- next-auth 5 (Auth.js) — Demo-Credentials-Login, JWT-Sessions
 - Tailwind CSS 4
-- Mock store (`src/lib/mock-store.ts` and friends) instead of the real
-  NestJS API / Postgres backend and Discord bot connection
+- Mock-Store (`src/lib/mock-store.ts` und Verwandte) statt dem echten
+  NestJS-API / Postgres-Backend und der Discord-Bot-Anbindung
 
-## Running locally
+## Lokal starten
 
 ```bash
 pnpm install
-cp .env.example .env.local   # fill in NEXTAUTH_SECRET
+cp .env.example .env.local   # NEXTAUTH_SECRET eintragen
 pnpm dev
 ```
 
-Open http://localhost:3000, click "Demo-Login starten".
+http://localhost:3000 öffnen, "Demo-Login starten" klicken.
 
-## Notes
+## Hinweise
 
-- Mock data resets on every server restart.
-- No connection to any real Discord server, database, or the Discord API.
+- Mock-Daten werden bei jedem Server-Neustart zurückgesetzt.
+- Keine Verbindung zu einem echten Discord-Server, einer Datenbank oder
+  der Discord-API.
